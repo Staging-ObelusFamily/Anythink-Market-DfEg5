@@ -29,7 +29,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: frontent
+        working-directory: frontend
     steps:
       - name: Check out project
         uses: actions/checkout@v2
