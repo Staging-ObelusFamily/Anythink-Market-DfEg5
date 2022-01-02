@@ -31,6 +31,8 @@ jobs:
       run:
         working-directory: frontent
     steps:
+      - name: Check out project
+        uses: actions/checkout@v2
       - name: Lint code
         uses: actions/setup-node@v1
         with:
