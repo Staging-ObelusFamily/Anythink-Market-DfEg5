@@ -27,14 +27,14 @@ jobs:
           
   lint:
     runs-on: ubuntu-latest
-    env:
-      working-directory: ./frontend
+    defaults:
+      run:
+        working-directory: frontent
     steps:
-      name: Lint code
-        uses: actions/setup-node@v2
-        working-directory: ${{env.working-directory}}
+      - name: Lint code
+        uses: actions/setup-node@v1
         with:
           node-version: '16'
           cache: 'yarn'
-          - run: yarn install
-          - run: yarn lint
+      - run: yarn install
+      - run: yarn lint
