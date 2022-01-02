@@ -24,3 +24,6 @@ jobs:
         uses: trywilco/actions@limor-machine
         with:
           owner: ${{ github.repository_owner }}
+          
+      - run: yarn install && cd frontend && yarn install
+      - run: yarn lint
