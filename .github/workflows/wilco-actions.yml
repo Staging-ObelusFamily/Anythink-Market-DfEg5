@@ -25,5 +25,16 @@ jobs:
         with:
           owner: ${{ github.repository_owner }}
           
-      - run: yarn install && cd frontend && yarn install
-      - run: yarn lint
+  lint:
+    runs-on: ubuntu-latest
+    env:
+      working-directory: ./frontend
+    steps:
+      name: Lint code
+        uses: actions/setup-node@v2
+        working-directory: ${{env.working-directory}}
+        with:
+          node-version: '16'
+          cache: 'yarn'
+          - run: yarn install
+          - run: yarn lint
