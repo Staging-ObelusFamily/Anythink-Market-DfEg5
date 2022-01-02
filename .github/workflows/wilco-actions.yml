@@ -25,7 +25,7 @@ jobs:
         with:
           owner: ${{ github.repository_owner }}
           
-  lint:
+  Lint:
     runs-on: ubuntu-latest
     defaults:
       run:
